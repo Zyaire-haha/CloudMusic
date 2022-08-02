@@ -1,31 +1,21 @@
 <template>
-  <div class="indexView">
-    <router-view></router-view>
-    <van-tabbar route v-model="active">
-      <van-tabbar-item replace to="/index/home" icon="home-o">主页</van-tabbar-item>
-      <van-tabbar-item replace to="" icon="search">标签</van-tabbar-item>
-      <van-tabbar-item replace to="" icon="search">标签</van-tabbar-item>
-      <van-tabbar-item replace to="" icon="search">标签</van-tabbar-item>
-    </van-tabbar>
+  <div>
+    <TopNavVue />
+    <SwiperTopVue />
   </div>
 </template>
 
 <script>
+import TopNavVue from '../components/TopNav.vue'
+import SwiperTopVue from '../components/SwiperTop.vue'
 export default {
   name: 'indexView',
-  data () {
-    return {
-      active: 0
-    }
+  components: {
+    TopNavVue,
+    SwiperTopVue
   }
 }
 </script>
 
 <style>
-.indexView{
-  width: 187.5px;
-  height: auto;
-  display: flex;
-  flex-direction: column;
-}
 </style>

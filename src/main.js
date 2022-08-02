@@ -5,13 +5,14 @@ import App from './App'
 import router from './router'
 import 'amfe-flexible'
 import './utils/rem'
-import { Swipe, SwipeItem, Lazyload, Tabbar, TabbarItem } from 'vant'
+import { Swipe, SwipeItem, Lazyload, Tabbar, TabbarItem, Icon } from 'vant'
 
 Vue.use(Swipe)
 Vue.use(SwipeItem)
 Vue.use(Lazyload)
 Vue.use(Tabbar)
 Vue.use(TabbarItem)
+Vue.use(Icon)
 
 Vue.config.productionTip = false
 
