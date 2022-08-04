@@ -1,29 +1,31 @@
 <template>
     <div id="swiperTop">
-        <van-swipe :autoplay="3000" lazy-render>
-            <van-swipe-item v-for="image in state.images" :key="image.bannerId">
-                <img :src="image.pic" />
+        <van-swipe :autoplay="3000">
+            <van-swipe-item v-for="(image, index) in images" :key="index">
+                <img v-lazy="image.imageUrl" />
             </van-swipe-item>
         </van-swipe>
     </div>
-
 </template>
 <script>
 import axios from 'axios'
+import { getBanner } from '../api/api'
 import { reactive, onMounted } from 'vue'
+import { async } from 'q'
 export default {
-  setup () {
-    const state = reactive({
-      images: [
-        'https://fastly.jsdelivr.net/npm/@vant/assets/apple-1.jpeg',
-        'https://fastly.jsdelivr.net/npm/@vant/assets/apple-2.jpeg'
-      ]})
-    onMounted(() => {
-      axios.get('http://localhost:3000/banner?type=2').then(res => {
-        state.images = res.data.banners
-      })
-    })
-    return { state }
+  data () {
+    return {
+      images: []
+    }
+  },
+  methods: {
+    async getLunbo () {
+      let res = await getBanner()
+      this.images = res.data.banners
+    }
+  },
+  mounted () {
+    this.getLunbo()
   }
 }
 

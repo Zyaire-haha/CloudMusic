@@ -1,0 +1,72 @@
+{
+  "id": "3555688",
+  "name": "网易云移动端",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "14191046",
+      "name": "播放",
+      "font_class": "bofang1",
+      "unicode": "e607",
+      "unicode_decimal": 58887
+    },
+    {
+      "icon_id": "1621099",
+      "name": "排行",
+      "font_class": "ranking",
+      "unicode": "e6fe",
+      "unicode_decimal": 59134
+    },
+    {
+      "icon_id": "5166737",
+      "name": "推荐",
+      "font_class": "tuijian",
+      "unicode": "e60a",
+      "unicode_decimal": 58890
+    },
+    {
+      "icon_id": "5618760",
+      "name": "歌单",
+      "font_class": "gedan",
+      "unicode": "e66a",
+      "unicode_decimal": 58986
+    },
+    {
+      "icon_id": "27799898",
+      "name": "icon_电台",
+      "font_class": "icon_diantai",
+      "unicode": "e617",
+      "unicode_decimal": 58903
+    },
+    {
+      "icon_id": "2815702",
+      "name": "播放",
+      "font_class": "bofang",
+      "unicode": "e601",
+      "unicode_decimal": 58881
+    },
+    {
+      "icon_id": "6399653",
+      "name": "播放",
+      "font_class": "weibiaoti--",
+      "unicode": "e60f",
+      "unicode_decimal": 58895
+    },
+    {
+      "icon_id": "629357",
+      "name": "搜索",
+      "font_class": "sousuo",
+      "unicode": "e651",
+      "unicode_decimal": 58961
+    },
+    {
+      "icon_id": "162727",
+      "name": "列表2",
+      "font_class": "liebiao2",
+      "unicode": "e600",
+      "unicode_decimal": 58880
+    }
+  ]
+}
