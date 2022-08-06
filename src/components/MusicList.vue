@@ -7,6 +7,7 @@
         <div class="musicContent">
             <van-swipe :loop="false" :width="150" class="my-swipe" :show-indicators=false>
                 <van-swipe-item v-for="(item, index) in musicList" :key="index">
+                <router-link :to="{path:'/itemMusic',query:{id:item.id}}">
                  <img :src="item.picUrl" alt="">
                  <span class="playCount">
                     <svg class="iconfont" aria-hidden="true">
@@ -15,6 +16,7 @@
                     {{changeCount(item.playCount)}}
                  </span>
                  <span class="name">{{item.name}}</span>
+                 </router-link>
                 </van-swipe-item>
             </van-swipe>
         </div>
@@ -31,7 +33,6 @@ export default {
   methods: {
     async getGedan () {
       let res = await getMusicList()
-      console.log(res)
       this.musicList = res.data.result
     },
     changeCount: function (num) {
